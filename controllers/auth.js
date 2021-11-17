@@ -22,7 +22,7 @@ const register = async (req, res) => {
     httpOnly: true,
     path: "auth/token",
   })
-  res.status(StatusCodes.CREATED).json({ user: { token, name: user.name } })
+  res.status(StatusCodes.CREATED).json({ user: { token, user: user.name } })
 }
 
 const login = async (req, res) => {
